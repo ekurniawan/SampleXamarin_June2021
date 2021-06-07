@@ -3,16 +3,35 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SampleXamarin.MainPage">
 
-    <StackLayout>
+    
+        <StackLayout>
         <Frame BackgroundColor="Red" Padding="24" CornerRadius="30">
             <Label Text="Selamat Datang Xamarin Forms" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
         </Frame>
-        <Label x:Name="lblMessage" HorizontalOptions="Center" Text="Hello Xamarin" FontSize="Medium" />
-        <StackLayout Orientation="Horizontal">
-            <Button x:Name="btnShow" Text="Show Message" Clicked="btnShow_Clicked" />
-            <Button x:Name="btnAdd" Text="Add" />
-            <Button x:Name="btnDelete" Text="Delete" />
-        </StackLayout>
+        <FlexLayout Direction="Column" JustifyContent="SpaceEvenly">
+            <Label Text="Test Flex Layout" />
+            <Label Text="Test Flex Layout" />
+            <Label Text="Test Flex Layout" />
+        </FlexLayout>
+        <ScrollView Orientation="Vertical">
+            <StackLayout>
+                <Image Source="https://news.microsoft.com/wp-content/uploads/2014/12/452292672.jpg" Aspect="AspectFit" HorizontalOptions="Center"
+                       VerticalOptions="Center" />
+                <Button Text="Test Layout" />
+                <Button Text="Test Layout" />
+                <Button Text="Test Layout" />
+                <Button Text="Test Layout" />
+                <Button Text="Test Layout" />
+                <Button Text="Test Layout" />
+                <Button Text="Test Layout" />
+                <Button Text="Test Layout" />
+                <Button Text="Test Layout" />
+                <Button Text="Test Layout" />
+                <Button Text="Test Layout" />
+                <Button Text="Test Layout" />
+            </StackLayout>
+        </ScrollView>
     </StackLayout>
+    
 
 </ContentPage>

@@ -10,7 +10,7 @@ namespace SampleXamarin
         {
             InitializeComponent();
 
-            MainPage = new GridLayoutPage();
+            MainPage = new SampleFlexPage();
         }
 
         protected override void OnStart()
