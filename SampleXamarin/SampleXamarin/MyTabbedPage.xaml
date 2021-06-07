@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+            xmlns:local="clr-namespace:SampleXamarin"
+            x:Class="SampleXamarin.MyTabbedPage" 
+             
+            Title="My Tab Page">
+  <!--Pages can be added as references or inline-->
+    <TabbedPage.Children>
+        <local:ContohListView IconImageSource="ic_add.png" Title="List" />
+        <local:ListViewImagePage IconImageSource="ic_add.png" Title="Image List" />
+        <local:ListViewWithViewCellPage IconImageSource="ic_add.png" Title="View Cell" />
+        <local:SampleAlertPage IconImageSource="ic_add.png" Title="Alert" />
+    </TabbedPage.Children>
+</TabbedPage>

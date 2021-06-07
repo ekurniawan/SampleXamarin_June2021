@@ -10,7 +10,10 @@ namespace SampleXamarin
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new NavigasiPage1());
+            //MainPage = new NavigationPage(new NavigasiPage1());
+            MainPage = new NavigationPage(new MyTabbedPage());
+            ((NavigationPage)Application.Current.MainPage).BarBackgroundColor = Color.Green;
+
         }
 
         protected override void OnStart()
