@@ -10,7 +10,7 @@ namespace SampleXamarin
         {
             InitializeComponent();
 
-            MainPage = new ListViewWithViewCellPage();
+            MainPage = new NavigationPage(new NavigasiPage1());
         }
 
         protected override void OnStart()

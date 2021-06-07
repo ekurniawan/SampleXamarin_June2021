@@ -4,7 +4,8 @@
              x:Class="SampleXamarin.ListViewWithViewCellPage">
     <ContentPage.Content>
         <StackLayout>
-            <ListView x:Name="lstData" HasUnevenRows="True">
+            <ListView x:Name="lstData" HasUnevenRows="True" ItemTapped="lstData_ItemTapped" 
+                      ItemSelected="lstData_ItemSelected">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>

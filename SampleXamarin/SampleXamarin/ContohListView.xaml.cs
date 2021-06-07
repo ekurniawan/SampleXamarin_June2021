@@ -33,12 +33,22 @@ namespace SampleXamarin
             ((ListView)sender).SelectedItem = null;
         }
 
-        private void listData_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        private async void listData_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             var item = ((ListView)sender).SelectedItem as ListItem;
             if (item == null)
                 return;
-            DisplayAlert("Keterangan", $"Anda memilih: {item.Title}", "OK");
+            await DisplayAlert("Keterangan", $"Anda memilih: {item.Title}", "OK");
+        }
+
+        private async void btnListWithImage_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new ListViewImagePage());
+        }
+
+        private async void btnBack_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PopAsync();
         }
 
         /*private void lstTest_ItemSelected(object sender, SelectedItemChangedEventArgs e)

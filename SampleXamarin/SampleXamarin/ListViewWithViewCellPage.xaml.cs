@@ -27,5 +27,19 @@ namespace SampleXamarin
             };
             lstData.ItemsSource = lstItems;
         }
+
+        private void lstData_ItemTapped(object sender, ItemTappedEventArgs e)
+        {
+            ((ListView)sender).SelectedItem = null;
+        }
+
+        private void lstData_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            var item = ((ListView)sender).SelectedItem as ListItem;
+            if (item == null)
+                return;
+
+            DisplayAlert("Item Selected", $"Item yg dipilih:{item.Title}", "OK");
+        }
     }
 }
