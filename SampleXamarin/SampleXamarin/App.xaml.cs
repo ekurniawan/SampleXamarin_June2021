@@ -10,7 +10,7 @@ namespace SampleXamarin
         {
             InitializeComponent();
 
-            MainPage = new SampleFlexPage();
+            MainPage = new ContohListView();
         }
 
         protected override void OnStart()
