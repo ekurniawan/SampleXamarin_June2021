@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SampleXamarin.GridLayoutPage">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="80"/>
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <Label Text="First Name :" VerticalTextAlignment="Center" HorizontalTextAlignment="End"  Grid.Row="0" Grid.Column="0" />
+            <Entry Placeholder="masukan first name" VerticalTextAlignment="Center" Grid.Row="0" Grid.Column="1" />
+            <Label Text="Last Name :" VerticalTextAlignment="Center" HorizontalTextAlignment="End" Grid.Row="1" Grid.Column="0" />
+            <Entry Placeholder="masukan last name" VerticalTextAlignment="Center" Grid.Row="1" Grid.Column="1" />
+            <StackLayout Grid.Row="2" Grid.Column="1" Orientation="Horizontal">
+                <Button Text="Add" />
+                <Button Text="Edit" />
+                <Button Text="Delete" />
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
