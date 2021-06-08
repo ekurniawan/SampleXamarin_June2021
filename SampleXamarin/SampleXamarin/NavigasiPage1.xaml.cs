@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Xamarin.Essentials;
 
 namespace SampleXamarin
 {
@@ -49,6 +50,13 @@ namespace SampleXamarin
             Application.Current.Properties["Username"] = entryPesan.Text;
             await DisplayAlert("Keterangan", "App Current berhasil dibuat", "OK");
 
+            await Navigation.PushAsync(new ListViewImagePage());
+        }
+
+        private async void btnPreferences_Clicked(object sender, EventArgs e)
+        {
+            Preferences.Set("password", entryPesan.Text);
+            await DisplayAlert("Preferences", "Object PReference sudah dibuat", "OK");
             await Navigation.PushAsync(new ListViewImagePage());
         }
     }

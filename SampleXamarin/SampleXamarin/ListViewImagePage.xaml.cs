@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -46,6 +46,15 @@ namespace SampleXamarin
                 await DisplayAlert("Keterangan", "Tidak ditemukan", "OK");
             }
             
+        }
+
+        private async void btnPreferences_Clicked(object sender, EventArgs e)
+        {
+            if (Preferences.ContainsKey("password"))
+            {
+                var pass = Preferences.Get("password", string.Empty);
+                await DisplayAlert("Preferences", $"Password: {pass}", "OK");
+            }
         }
     }
 }

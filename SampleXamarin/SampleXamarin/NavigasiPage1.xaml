@@ -14,6 +14,7 @@
             <Button x:Name="btnSimpleList" Text="Simple List" Clicked="btnSimpleList_Clicked" />
             <Button x:Name="btnGlobalVar" Text="Image List" Clicked="btnGlobalVar_Clicked" />
             <Button x:Name="btnAppCurrent" Text="Application Current Prop" Clicked="btnAppCurrent_Clicked" />
+            <Button x:Name="btnPreferences" Text="Preferences" Clicked="btnPreferences_Clicked" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
