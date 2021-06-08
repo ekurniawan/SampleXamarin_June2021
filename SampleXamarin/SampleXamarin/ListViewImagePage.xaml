@@ -12,6 +12,10 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
+            <StackLayout Orientation="Horizontal">
+                <Button x:Name="btnCekGlobal" Text="Cek Global" Clicked="btnCekGlobal_Clicked" />
+                <Button x:Name="btnAppCurrent" Text="Cek App Current" Clicked="btnAppCurrent_Clicked"/>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

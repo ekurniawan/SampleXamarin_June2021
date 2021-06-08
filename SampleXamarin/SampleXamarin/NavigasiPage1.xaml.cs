@@ -35,12 +35,20 @@ namespace SampleXamarin
 
         private async void menuViewCell_Clicked(object sender, EventArgs e)
         {
-            await DisplayAlert("Add","Add Items","OK");
+            await DisplayAlert("Add", "Add Items", "OK");
         }
 
         private async void btnGlobalVar_Clicked(object sender, EventArgs e)
         {
             Global.Instance.myData = entryPesan.Text;
+            await Navigation.PushAsync(new ListViewImagePage());
+        }
+
+        private async void btnAppCurrent_Clicked(object sender, EventArgs e)
+        {
+            Application.Current.Properties["Username"] = entryPesan.Text;
+            await DisplayAlert("Keterangan", "App Current berhasil dibuat", "OK");
+
             await Navigation.PushAsync(new ListViewImagePage());
         }
     }

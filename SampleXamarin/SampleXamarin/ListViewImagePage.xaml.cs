@@ -27,5 +27,25 @@ namespace SampleXamarin
             };
             lstData.ItemsSource = lstItems;
         }
+
+        private async void btnCekGlobal_Clicked(object sender, EventArgs e)
+        {
+            string data = Global.Instance.myData;
+            await DisplayAlert("Global Var", data, "OK");
+        }
+
+        private async void btnAppCurrent_Clicked(object sender, EventArgs e)
+        {
+            if (Application.Current.Properties.ContainsKey("Username"))
+            {
+                var username = Application.Current.Properties["Username"].ToString();
+                await DisplayAlert("App Current", $"Username: {username}", "OK");
+            }
+            else
+            {
+                await DisplayAlert("Keterangan", "Tidak ditemukan", "OK");
+            }
+            
+        }
     }
 }
