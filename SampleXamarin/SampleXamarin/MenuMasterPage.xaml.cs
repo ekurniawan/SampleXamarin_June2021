@@ -22,6 +22,7 @@ namespace SampleXamarin
             menuItem = new ObservableCollection<MyMenuItem>
             {
                 new MyMenuItem{Id=0,Title="Main Menu",TargetType=typeof(MainPage),ImageIcon="ic_add.png"},
+                new MyMenuItem{Id=5,Title="Geoloc",TargetType=typeof(GeolocationPage),ImageIcon="ic_add.png"},
                 new MyMenuItem{Id=1,Title="Simple List",TargetType=typeof(ContohListView),ImageIcon="ic_add.png"},
                 new MyMenuItem{Id=2,Title="List Image",TargetType=typeof(ListViewImagePage),ImageIcon="ic_add.png"},
                 new MyMenuItem{Id=3,Title="Custom List",TargetType=typeof(ListViewWithViewCellPage),ImageIcon="ic_add.png"},
