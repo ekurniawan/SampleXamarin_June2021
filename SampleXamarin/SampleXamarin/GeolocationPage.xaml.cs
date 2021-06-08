@@ -24,11 +24,21 @@ namespace SampleXamarin
             {
                 var request = new GeolocationRequest(GeolocationAccuracy.Medium);
                 var location = await Geolocation.GetLocationAsync(request);
+                double lat = location.Latitude;
+                double lon = location.Longitude;
                 if (location != null)
                 {
                     await DisplayAlert("Info GeoLoc",
                         $"Latitude:{location.Latitude} Longitude:{location.Longitude} Altitude: {location.Altitude}", "OK");
+
+                    var placemarks = await Geocoding.GetPlacemarksAsync(lat, lon);
+                    var placemark = placemarks?.FirstOrDefault();
+                    if (placemark!=null){
+                        await DisplayAlert("Geocode", $"Area: {placemark.AdminArea}, Country Code:{placemark.CountryCode}, CountyName: {placemark.CountryName}, Local:{placemark.Locality}, SubLocality: {placemark.SubLocality} ", "OK");
+                    }
                 }
+
+
             }
             catch (FeatureNotSupportedException fnsEx)
             {
