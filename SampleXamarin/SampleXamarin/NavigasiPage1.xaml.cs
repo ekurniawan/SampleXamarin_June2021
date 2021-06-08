@@ -37,5 +37,11 @@ namespace SampleXamarin
         {
             await DisplayAlert("Add","Add Items","OK");
         }
+
+        private async void btnGlobalVar_Clicked(object sender, EventArgs e)
+        {
+            Global.Instance.myData = entryPesan.Text;
+            await Navigation.PushAsync(new ListViewImagePage());
+        }
     }
 }

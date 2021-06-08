@@ -12,6 +12,7 @@
         <StackLayout>
             <Entry x:Name="entryPesan" Placeholder="masukan pesan yg dikirim" />
             <Button x:Name="btnSimpleList" Text="Simple List" Clicked="btnSimpleList_Clicked" />
+            <Button x:Name="btnGlobalVar" Text="Image List" Clicked="btnGlobalVar_Clicked" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
