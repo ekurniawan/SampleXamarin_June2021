@@ -19,7 +19,8 @@ namespace SampleXamarin
 
         private async void btnSimpleList_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new ContohListView());
+            var contohListViewPage = new ContohListView(entryPesan.Text);
+            await Navigation.PushAsync(contohListViewPage);
         }
 
         private async void menuSimpleList_Clicked(object sender, EventArgs e)

@@ -10,6 +10,7 @@
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <StackLayout>
+            <Entry x:Name="entryPesan" Placeholder="masukan pesan yg dikirim" />
             <Button x:Name="btnSimpleList" Text="Simple List" Clicked="btnSimpleList_Clicked" />
         </StackLayout>
     </ContentPage.Content>
