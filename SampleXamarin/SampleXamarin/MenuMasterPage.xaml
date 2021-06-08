@@ -19,9 +19,15 @@
                         <RowDefinition Height="10" />
                     </Grid.RowDefinitions>
                     <StackLayout Grid.Column="1" Grid.Row="2" Orientation="Horizontal">
-                        <Image Source="logo.png" WidthRequest="60" HorizontalOptions="Start" />
+                        <ImageButton x:Name="imgbtnUser" Source="logo.png" WidthRequest="60" HorizontalOptions="Start"
+                                     Clicked="imgbtnUser_Clicked"/>
                         <Label Text="Coffee Apps" FontSize="Large" VerticalOptions="Center"
-                               FontAttributes="Bold" />
+                               FontAttributes="Bold">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" 
+                                                      NumberOfTapsRequired="1" />
+                            </Label.GestureRecognizers>
+                        </Label>
                     </StackLayout>
                 </Grid>
             </ListView.Header>

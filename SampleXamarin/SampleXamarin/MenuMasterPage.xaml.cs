@@ -31,5 +31,17 @@ namespace SampleXamarin
             menuItemListView.ItemsSource = menuItem;
             ListView = menuItemListView;
         }
+
+       
+
+        private async void imgbtnUser_Clicked(object sender, EventArgs e)
+        {
+            await DisplayAlert("Test", "Hello", "OK");
+        }
+
+        private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        {
+            await DisplayAlert("Test", "Tap Gesture", "OK");
+        }
     }
 }
